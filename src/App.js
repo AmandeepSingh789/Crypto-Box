@@ -1,10 +1,12 @@
 import React from "react";
+import Navbar from "./components/Navbar";
+import { ThemeProvider } from "./ThemeContext";
 
 function App() {
   return (
-    <div className="App">
-      <h1 >CRYPTO APP BNEGI BAHUT BHAYANKAR</h1>
-    </div>
+    <ThemeProvider >
+      <Navbar />
+    </ThemeProvider>
   );
 }
 
