@@ -3,6 +3,7 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@500&family=Edu+VIC+WA+NT+Beginner:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
 :root{
   @apply bg-primary text-primary
   
@@ -13,21 +14,21 @@
 }
 
 .dark{
-  --color-bg-primary:#2d3748;
-  --color-bg-secondary:#283141;
+  --color-bg-primary:#321F28;
+  --color-bg-secondary:#734046;
   --color-text-primary:#dbdbdb;
   --color-text-secondary:#e2e8f0;
-  --color-text-accent:#81e6d9;
-  --color-bg-input:#4a5361;
-  --color-bg-button:#81e6d9;
+  --color-text-accent:#E79E4F;
+  --color-bg-input:#E79E4F;
+  --color-bg-button:#E79E4F;
 }
 
 .light{
-  --color-bg-primary:#ffffff;
+  --color-bg-primary:#f2f2f2;
   --color-bg-secondary:#edf2f7;
-  --color-text-primary:#2d3748;
-  --color-text-secondary:#4a5568;
-  --color-text-accent:#2b6cb0;
-  --color-bg-input:#edf2f7;
-  --color-bg-button:#2b6cb0;
+  --color-text-primary:#000000;
+  --color-text-secondary:#FAD4D4;
+  --color-text-accent:#F47C7C;
+  --color-bg-input:#FAD4D4;
+  --color-bg-button:#F47C7C;
 }

@@ -10,11 +10,11 @@ const CoinItem = ({coin}) => {
     
         <tr className='h-[80px] border-b overflow-hidden text-xl'>
 
-            <td><BsCoin size={30}/></td>
+            <td><BsCoin size={30} className='mr-2'/></td>
             <td>{coin.market_cap_rank}</td>
-            <td><div className='flex items-center'>
-                <img src={coin.image} alt={coin.id} className='w-6 mr-2 rounded-full' />
-                <p className='hidden md:table-cell '>{coin.name}</p>
+            <td><div className='flex items-center mx-2'>
+                <img src={coin.image} alt={coin.id} className='w-6 mr-2 rounded-full animate-waving-hand ' />
+                <p className='hidden md:table-cell ml-2'>{coin.name}</p>
             </div></td>
             <td>{coin.symbol.toUpperCase()}</td>
             <td>$ {coin.current_price.toLocaleString()} </td>
@@ -24,8 +24,9 @@ const CoinItem = ({coin}) => {
             <td className='w-[180px] hidden md:table-cell'>$ {coin.market_cap.toLocaleString()}</td>
             <td><Sparklines data={coin.sparkline_in_7d.price}>
 
-            {theme==='dark' ? (<SparklinesLine color="pink" />) :
-                (<SparklinesLine color="#2b6cb0" />)}
+            {theme==='dark' ? (<SparklinesLine color="#E79E4F" />) :
+                (<SparklinesLine color="#d06d6d
+                " />)}
                 </Sparklines></td>
             </tr>
     

@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <div className='rounded-div flex items-center justify-between h-20 font-bold font-Josefin '>
         <Link to ="/">
-            <h1 className='text-4xl font-Edu'>CryptoBox</h1>
+            <h1 className='text-4xl font-Edu mx-4 '>CryptoBox</h1>
         </Link>
         <div className='hidden md:block text-2xl'>
             <ThemeBtn />
@@ -21,7 +21,7 @@ const Navbar = () => {
 
         <div className='hidden md:block'>
             <Link to ="/signin" className='p-4 hover:text-accent text-2xl'>Sign In</Link>
-            <Link to ="/signin" className='  bg-button text-btnText px-5 py-2 ml-2 rounded-2xl shadow-lg hover:shadow-2xl text-2xl'>Sign Up</Link>
+            <Link to ="/signin" className='  bg-button text-btnText px-5 py-2 ml-2 rounded-2xl shadow-lg hover:shadow-2xl text-2xl mx-4'>Sign Up</Link>
         </div>
 
         {/*Menu */}
