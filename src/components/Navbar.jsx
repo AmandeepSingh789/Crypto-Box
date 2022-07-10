@@ -15,9 +15,9 @@ const Navbar = () => {
         <Link to ="/">
             <h1 className='text-4xl font-Edu'>CryptoBox</h1>
         </Link>
-        <di className='hidden md:block text-2xl'>
+        <div className='hidden md:block text-2xl'>
             <ThemeBtn />
-        </di>
+        </div>
 
         <div className='hidden md:block'>
             <Link to ="/signin" className='p-4 hover:text-accent text-2xl'>Sign In</Link>
