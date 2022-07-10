@@ -6,6 +6,7 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      
       fontFamily: {
         'Josefin': ['josefin Sans', 'sans-serif'] ,
         'Edu': ['Edu VIC WA NT Beginner', 'cursive']

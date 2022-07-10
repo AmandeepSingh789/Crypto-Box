@@ -8,11 +8,11 @@ const ThemeBtn = () => {
   return (
     <div className='p-2'>
         {theme==='dark' ?(
-            <div className='flex items-center cursor-pointer' onClick={()=> setTheme(theme==='dark' ? 'light' : 'dark')}>
-                <FaSun className='text-primary text-2xl mr-2'/> Light Mode
+            <div className='flex items-center cursor-pointer hover:text-accent' onClick={()=> setTheme(theme==='dark' ? 'light' : 'dark')}>
+                <FaSun className='text-primary text-2xl mr-2 '/> Light Mode
             </div>
         ) : (
-            <div className='flex items-center cursor-pointer' onClick={()=> setTheme(theme==='dark' ? 'light' : 'dark')}>
+            <div className='flex items-center cursor-pointer hover:text-accent' onClick={()=> setTheme(theme==='dark' ? 'light' : 'dark')}>
                 <BsMoonStarsFill className='text-primary text-2xl mr-2'/> Dark Mode
                  </div>
         )}
