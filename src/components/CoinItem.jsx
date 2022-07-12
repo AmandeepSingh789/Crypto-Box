@@ -8,12 +8,12 @@ const CoinItem = ({coin}) => {
     const {theme,setTheme} = useContext(ThemeContext)
   return (
     
-        <tr className='h-[80px] border-b overflow-hidden text-xl'>
+        <tr className='h-[80px] border-b overflow-hidden text-xl group'>
 
             <td><BsCoin size={30} className='mr-2'/></td>
             <td>{coin.market_cap_rank}</td>
             <td><div className='flex items-center mx-2'>
-                <img src={coin.image} alt={coin.id} className='w-6 mr-2 rounded-full animate-waving-hand ' />
+                <img src={coin.image} alt={coin.id} className='w-6 mr-2 rounded-full animate-waving-hand group-hover:animate-none' />
                 <p className='hidden md:table-cell ml-2'>{coin.name}</p>
             </div></td>
             <td>{coin.symbol.toUpperCase()}</td>
