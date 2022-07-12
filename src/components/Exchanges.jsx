@@ -16,7 +16,7 @@ const Exchanges = () => {
 
   return (
     <div className='font-Josefin rounded-div my-12 py-8 text-primary '>
-        <h1 className='font-bold text-4xl my-12'>Top Markets</h1>
+        <h1 className='font-bold text-4xl my-12'>Top 10 Markets</h1>
 
         <div>
         <table className='w-full border-collapse text-center'>
