@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import axios from "axios";
+import ExchangeItem from './/ExchangeItem'
 
 const Exchanges = () => {
     const [markets,setMarkets]=useState([]);
@@ -9,7 +10,7 @@ const Exchanges = () => {
   
       axios.get(url).then((response)=>{
         setMarkets(response.data)
-        console.log(response.data)
+       
       })
     },[])
 
@@ -18,20 +19,55 @@ const Exchanges = () => {
         <h1 className='font-bold text-4xl my-12'>Top Markets</h1>
 
         <div>
-            {/* {markets.map((market)(
-                <div>
-                    <h1>{market.name}</h1>
-                    </div>
-            ))} */}
+        <table className='w-full border-collapse text-center'>
+            <thead>
+                <tr className='border-b text-lg'>
+                    <th className='px-4'></th>
+                    <th>#</th>
+                    <th className='text-center'>Exchange</th>
+                    
+                    <th>Year Estabished</th>
+                    
+                    <th className='hidden md:table-cell'>24h Trade Volume (BTC)</th>
+                    
+                </tr>
+            </thead>
+            
+        <tbody>
+            {markets.map((exchange)=>(
 
-            {markets.map((coin)=>(
-                    <div>
-                    <h1>{coin.name}</h1>
-                    </div>
+                
+                    <ExchangeItem exchange={exchange} key={exchange.id} />   
+                
+                    // <div>
+                    // <h1>{exchange.name}</h1>
+                    // <a href={exchange.url} target="_blank">
+                    //     <img src={exchange.image} alt="" className='rounded-full animate-waving-hand' />
+                    // </a>
+                    // </div>
                 ))}
+</tbody>
+</table>
         </div>
     </div>
   )
 }
+
+//                 {
+//                     coins.filter((value)=>{
+//                         if(searchText ===''){
+//                             return value
+//                         }
+//                         else if(
+//                             value.name.toLowerCase().includes(searchText.toLowerCase())
+//                         ){
+//                             return value
+//                         }
+//                     }).map((coin)=>(
+//                         <CoinItem coin={coin} key={coin.id} />
+//                     ))
+//                 }
+//             </tbody>
+//         </table>
 
 export default Exchanges
