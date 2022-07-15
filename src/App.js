@@ -8,6 +8,7 @@ import Signup from "./routes/Signup";
 import { ThemeProvider } from "./ThemeContext";
 import axios from "axios";
 import CoinPage from "./routes/CoinPage";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route path=":coinId"/>
         </Route>
       </Routes>
+      <Footer />
     </ThemeProvider>
   );
 }

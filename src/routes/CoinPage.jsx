@@ -120,10 +120,10 @@ const CoinPage = () => {
                     </div>
 
                     <div className='flex justify-around p-8 text-accent text-4xl'>
-                        <FaTwitter className='hover:text-primary'/>
-                        <FaFacebook className='hover:text-primary'/>
-                        <FaReddit className='hover:text-primary'/>
-                        <FaGithub className='hover:text-primary'/>
+                        <FaTwitter className='hover:text-primary cursor-pointer'/>
+                        <FaFacebook className='hover:text-primary cursor-pointer'/>
+                        <FaReddit className='hover:text-primary cursor-pointer'/>
+                        <FaGithub className='hover:text-primary cursor-pointer'/>
 
                     </div>
                 </div>
