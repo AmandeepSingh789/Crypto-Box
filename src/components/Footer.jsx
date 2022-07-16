@@ -41,7 +41,7 @@ const Footer = () => {
                         </form>
                         </div>
                         <div className='flex py-4 justify-between text-accent text-3xl'>
-                        <AiOutlineInstagram className='hover:text-primary cursor-pointer'/>
+                        <AiOutlineInstagram className='hover:text-primary cursor-pointer text-4xl'/>
                         <FaTiktok className='hover:text-primary cursor-pointer'/>
                         <FaTwitter className='hover:text-primary cursor-pointer'/>
                         <FaGithub className='hover:text-primary cursor-pointer'/>
