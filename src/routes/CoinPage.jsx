@@ -2,7 +2,7 @@ import React,{useState,useEffect,useContext} from 'react'
 import axios from 'axios'
 import { SparklinesLine } from 'react-sparklines';
 import { Sparklines,Sparkline } from 'react-sparklines';
-import { ThemeContext } from '../ThemeContext';
+import { ThemeContext } from '../context/ThemeContext';
 import { FaTwitter,FaFacebook,FaReddit,FaGithub } from 'react-icons/fa';
 import DOMPurify from 'dompurify';
 import { useParams  } from 'react-router-dom';

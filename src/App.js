@@ -5,7 +5,7 @@ import Account from "./routes/Account";
 import Home from "./routes/Home";
 import Signin from "./routes/Signin";
 import Signup from "./routes/Signup";
-import { ThemeProvider } from "./ThemeContext";
+import { ThemeProvider } from "./context/ThemeContext";
 import axios from "axios";
 import CoinPage from "./routes/CoinPage";
 import Footer from "./components/Footer";

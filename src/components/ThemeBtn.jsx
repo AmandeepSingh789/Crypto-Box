@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import {BsMoonStarsFill} from 'react-icons/bs'
 import {FaSun} from 'react-icons/fa'
-import { ThemeContext } from '../ThemeContext'
+import { ThemeContext } from '../context/ThemeContext'
 const ThemeBtn = () => {
 
     const {theme,setTheme} = useContext(ThemeContext)

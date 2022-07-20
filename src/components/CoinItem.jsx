@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import {BsCoin} from 'react-icons/bs'
 import { SparklinesLine } from 'react-sparklines';
 import { Sparklines,Sparkline } from 'react-sparklines';
-import { ThemeContext } from '../ThemeContext'
+import { ThemeContext } from '../context/ThemeContext'
 import { Link } from 'react-router-dom';
 const CoinItem = ({coin}) => {
 
