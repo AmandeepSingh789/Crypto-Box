@@ -10,7 +10,7 @@ import axios from "axios";
 import CoinPage from "./routes/CoinPage";
 import Footer from "./components/Footer";
 import { AuthContextProvider } from "./context/AuthContext";
-
+import ExchangePage from './routes/ExchangePage'
 
 function App() {
 
@@ -36,6 +36,9 @@ function App() {
         <Route path ='/account' element={<Account />} />
         <Route path="/coin/:coinId" element={<CoinPage />}>
           <Route path=":coinId"/>
+        </Route>
+        <Route path="/exchange/:exchangeId" element={<ExchangePage />}>
+          <Route path=":exchangeId"/>
         </Route>
       </Routes>
       <Footer />

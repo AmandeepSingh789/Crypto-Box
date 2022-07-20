@@ -1,6 +1,7 @@
 import React from 'react'
 import {AiOutlineTransaction} from 'react-icons/ai'
 import Exchanges from './Exchanges'
+import { Link } from 'react-router-dom'
 const ExchangeItem = ({exchange}) => {
   return (
     
@@ -8,15 +9,15 @@ const ExchangeItem = ({exchange}) => {
         <td><AiOutlineTransaction size={35} className=' mt-2' /></td>
         <td >{exchange.trust_score_rank}</td>
         <td className='mx-20'>
-            <div className='flex items-center ml-12' >
-            <img src={exchange.image} alt=" /" className=' w-6 rounded-full mt-2 ml-4 animate-waving-hand group-hover:animate-none'
-        />
-                <a href={exchange.url} target="_blank">
-                    <p className='ml-4 '>
-                    
-                    {exchange.name }
-                    </p>
-                </a>
+            <div className='flex flex-row items-center ml-12 text-center' >
+
+            <Link to={`/exchange/${exchange.id}` } className='flex flex-row'>
+                
+                <img src={exchange.image} alt=" /" className=' w-6 rounded-full mt-2 ml-4 animate-waving-hand group-hover:animate-none' />
+
+                <p className='ml-4 '>{exchange.name } </p>
+                
+                </Link>
             </div>
 
         </td>

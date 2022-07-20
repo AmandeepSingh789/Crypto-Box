@@ -26,7 +26,7 @@ const Exchanges = () => {
                     <th>#</th>
                     <th className='text-center'>Exchange</th>
                     
-                    <th>Year Estabished</th>
+                      <th>Year Estabished</th>
                     
                     <th className='hidden md:table-cell'>24h Trade Volume (BTC)</th>
                     
