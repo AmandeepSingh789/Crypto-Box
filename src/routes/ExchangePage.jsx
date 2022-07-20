@@ -1,9 +1,8 @@
 import React,{useState,useEffect,useContext} from 'react'
 import axios from 'axios'
-import { SparklinesLine } from 'react-sparklines';
-import { Sparklines,Sparkline } from 'react-sparklines';
+
 import { ThemeContext } from '../context/ThemeContext';
-import { FaTwitter,FaFacebook,FaReddit,FaGithub } from 'react-icons/fa';
+import { FaGithub,FaFacebook,FaReddit,FaSlack,FaTwitter,FaGlobe} from 'react-icons/fa';
 import DOMPurify from 'dompurify';
 import { Link, useParams  } from 'react-router-dom';
 const MarketPage = () => {
@@ -17,20 +16,19 @@ const MarketPage = () => {
     useEffect(()=>{
         axios.get(url).then((response)=>{
           setExchange(response.data)
-            console.log(response.data)
+            
         })
     },[url])
 
   return (
     <div className='rounded-div my-12 py-8 font-Josefin'>
       <div className='flex py-8'>
-        <a href={exchange.url} target="_blank">
+        
             <img src={exchange.image} alt="" className='w-20 mx-8 animate-waving-hand' />
-            </a>
-            <div>
-                <p className='text-5xl font-bold'>
-                    <a href={exchange.url} target="_blank">{exchange?.name} </a>
-                    
+            
+            <div className='mx-12 sm:md-0'>
+                <p className='text-5xl font-bold '>
+                    {exchange?.name} 
                     
                 </p>
                 <p>{exchange.country}</p>
@@ -50,11 +48,7 @@ const MarketPage = () => {
                         
                     </div>
 
-                    {/* <div>
-                        <p className='text-accent '>Volume (24h)</p>
-                        {exchange.market_data?.market_cap ? (<p>${coexchangein.market_data?.total_volume.usd.toLocaleString()}</p>) : null}
-                        
-                    </div> */}
+                   
                 </div>
 
 
@@ -77,6 +71,19 @@ const MarketPage = () => {
                     </div>
         </div>
       </div>
+      <div className='flex justify-around p-8 text-accent text-4xl'>
+        
+        <a href= {exchange?.facebook_url}><FaFacebook className='hover:text-primary cursor-pointer'/></a>
+        <a href={exchange?.url}><FaGlobe className='hover:text-primary cursor-pointer'/></a>
+        
+        <a href={exchange?.reddit_url}>
+        <FaReddit className='hover:text-primary cursor-pointer'/>
+        </a>
+        <a href={exchange?.slack_url}>
+        <FaSlack className='hover:text-primary cursor-pointer'/>
+        </a>
+
+         </div>
       </div>
   )
 }

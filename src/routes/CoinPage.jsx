@@ -3,7 +3,7 @@ import axios from 'axios'
 import { SparklinesLine } from 'react-sparklines';
 import { Sparklines,Sparkline } from 'react-sparklines';
 import { ThemeContext } from '../context/ThemeContext';
-import { FaTwitter,FaFacebook,FaReddit,FaGithub } from 'react-icons/fa';
+import { FaForumbee,FaFacebook,FaReddit,FaGithub } from 'react-icons/fa';
 import DOMPurify from 'dompurify';
 import { useParams  } from 'react-router-dom';
 const CoinPage = () => {
@@ -120,10 +120,12 @@ const CoinPage = () => {
                     </div>
 
                     <div className='flex justify-around p-8 text-accent text-4xl'>
-                        <FaTwitter className='hover:text-primary cursor-pointer'/>
+                        <a href={coin.links?.subreddit_url}><FaReddit className='hover:text-primary cursor-pointer'/></a>
+                        <a href={coin.links?.official_forum_url[0]}><FaForumbee className='hover:text-primary cursor-pointer'/></a>
+                        
                         <FaFacebook className='hover:text-primary cursor-pointer'/>
-                        <FaReddit className='hover:text-primary cursor-pointer'/>
-                        <FaGithub className='hover:text-primary cursor-pointer'/>
+                        <a href={coin.links?.repos_url?.github[0]}><FaGithub className='hover:text-primary cursor-pointer'/></a>
+                        
 
                     </div>
                 </div>
