@@ -36,13 +36,15 @@ const Navbar = () => {
         </div>
 
          
-        {user?.email ? (<div> 
+        {user?.email ? (<div className='hidden md:block'> 
             <Link to ="/account" className='p-4 hover:text-accent text-2xl'>
                 Account
             </Link>
 
             <button onClick={handleSignOut} className='bg-button text-btnText px-2 py-2 ml-2 rounded-2xl shadow-lg hover:shadow-2xl text-xl mx-4'>Sign Out</button>
-            </div>) : (<div className='hidden md:block'>
+            </div>) :
+            
+            (<div className='hidden md:block'>
             <Link to ="/signin" className='p-4 hover:text-accent text-2xl'>Sign In</Link>
             <Link to ="/signup" className='  bg-button text-btnText px-5 py-2 ml-2 rounded-2xl shadow-lg hover:shadow-2xl text-2xl mx-4'>Sign Up</Link>
         </div>)}
@@ -67,13 +69,21 @@ const Navbar = () => {
                 </li>
             </ul>
             <div className='flex flex-col w-full p-4 text-2xl'>
-                <Link onClick={toggleNav}  to = "/signin" className=' '>
+                
+
+                {user?.email ? (<div>
+
+                    <button  onClick={handleSignOut} className=' w-full my-2 p-3 bg-button text-btnText  rounded-2xl shadow-xl'>Sign Out</button>
+                </div>) :
+
+                (<div>
+                    <Link onClick={toggleNav}  to = "/signin" className=' '>
                     <button className=' w-full hover:text-accent my-2 p-3 bg-primary text-primary border border-secondary rounded-2xl shadow-xl'>Sign In</button>
                 </Link>
-
                 <Link onClick={toggleNav}  to = "/signup">
                     <button  className=' w-full my-2 p-3 bg-button text-btnText  rounded-2xl shadow-xl'>Sign Up</button>
                 </Link>
+                    </div>)}
             </div>
         </div>
     </div>
