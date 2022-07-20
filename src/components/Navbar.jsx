@@ -1,14 +1,30 @@
 import React,{useState} from 'react'
-import {Link} from 'react-router-dom'; 
+import {Link, useNavigate} from 'react-router-dom'; 
 import ThemeBtn from './ThemeBtn';
 import {AiOutlineMenu,AiOutlineClose} from 'react-icons/ai'
+import { UserAuth } from '../context/AuthContext';
+
 const Navbar = () => {
 
     const [nav,setNav]=useState(false)
 
+    const {user,logout} =UserAuth()
+
+    const navigate=useNavigate();
+
     const toggleNav =()=> {
     setNav(!nav)
     }
+
+    const handleSignOut = async () => {
+        try{
+          await logout()
+          navigate('/')
+        }
+        catch (e){
+          console.log(e.message)
+        }
+      }
 
   return (
     <div className='rounded-div flex items-center justify-between h-20 font-bold font-Josefin '>
@@ -19,10 +35,17 @@ const Navbar = () => {
             <ThemeBtn />
         </div>
 
-        <div className='hidden md:block'>
+         
+        {user?.email ? (<div> 
+            <Link to ="/account" className='p-4 hover:text-accent text-2xl'>
+                Account
+            </Link>
+
+            <button onClick={handleSignOut} className='bg-button text-btnText px-5 py-2 ml-2 rounded-2xl shadow-lg hover:shadow-2xl text-2xl mx-4'>Sign Out</button>
+            </div>) : (<div className='hidden md:block'>
             <Link to ="/signin" className='p-4 hover:text-accent text-2xl'>Sign In</Link>
             <Link to ="/signup" className='  bg-button text-btnText px-5 py-2 ml-2 rounded-2xl shadow-lg hover:shadow-2xl text-2xl mx-4'>Sign Up</Link>
-        </div>
+        </div>)}
 
         {/*Menu */}
 

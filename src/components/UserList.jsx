@@ -1,10 +1,21 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
+import {doc, onSnapshot, updateDoc} from 'firebase/firestore'
+import { UserAuth } from '../context/AuthContext';
+import {db} from '../firebase'
+
 
 const UserList = () => {
     const [coins,setCoins]=useState([])
 
+    const {user} = UserAuth();
+
+    useEffect(()=>{
+        onSnapshot(doc(db,'users',`${user.email}`),(doc)=>{
+            setCoins(doc.data()?.watchList)
+        })
+    },[user?.email])
   return (
     <div className='font-Josefin'> 
         {coins.length===0 ? (<p>
