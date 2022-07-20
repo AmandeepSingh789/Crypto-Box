@@ -23,7 +23,7 @@ const Trending = () => {
                         <div className='flex w-full items-center justify-between'>
                             <Link to={`/coin/${coin.item.id}`}>
                               <div className='flex '>
-                                  <img src={coin.item.small} alt={coin.item.id} className='mr-2 rounded-full animate-waving-hand group-hover:animate-none'/>
+                                  <img src={coin.item.small} alt={coin.item.id} className='mr-2 rounded-full animate-waving-hand '/>
                                   <div>
                                       <p className='font-bold text-xl'>{coin.item.name}</p>
                                       <p>{coin.item.symbol}</p>

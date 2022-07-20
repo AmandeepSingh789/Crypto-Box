@@ -13,7 +13,7 @@ const ExchangeItem = ({exchange}) => {
 
             <Link to={`/exchange/${exchange.id}` } className='flex flex-row'>
                 
-                <img src={exchange.image} alt=" /" className=' w-6 rounded-full mt-2 ml-4 animate-waving-hand group-hover:animate-none' />
+                <img src={exchange.image} alt=" /" className=' w-6 rounded-full mt-2 ml-4 animate-waving-hand ' />
 
                 <p className='ml-4 '>{exchange.name } </p>
                 

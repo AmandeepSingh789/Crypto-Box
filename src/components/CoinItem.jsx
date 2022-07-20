@@ -52,7 +52,7 @@ const CoinItem = ({coin}) => {
             <td>
                 <Link to={`/coin/${coin.id}`}>
                     <div className='flex items-center mx-2'>
-                    <img src={coin.image} alt={coin.id} className='w-6 mr-2 rounded-full animate-waving-hand group-hover:animate-none' />
+                    <img src={coin.image} alt={coin.id} className='w-6 mr-2 rounded-full animate-waving-hand ' />
                     <p className='hidden md:table-cell ml-2'>{coin.name}</p>
                 </div>
             </Link></td>

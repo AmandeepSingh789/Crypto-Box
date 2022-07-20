@@ -5,7 +5,7 @@ import { Sparklines,Sparkline } from 'react-sparklines';
 import { ThemeContext } from '../context/ThemeContext';
 import { FaTwitter,FaFacebook,FaReddit,FaGithub } from 'react-icons/fa';
 import DOMPurify from 'dompurify';
-import { useParams  } from 'react-router-dom';
+import { Link, useParams  } from 'react-router-dom';
 const MarketPage = () => {
 
   const {theme,setTheme} = useContext(ThemeContext)  
@@ -24,10 +24,14 @@ const MarketPage = () => {
   return (
     <div className='rounded-div my-12 py-8 font-Josefin'>
       <div className='flex py-8'>
-            <img src={exchange.image} alt="" className='w-20 mx-8 animate-waving-hand hover:animate-none' />
+        <a href={exchange.url} target="_blank">
+            <img src={exchange.image} alt="" className='w-20 mx-8 animate-waving-hand' />
+            </a>
             <div>
                 <p className='text-5xl font-bold'>
-                    {exchange?.name} 
+                    <a href={exchange.url} target="_blank">{exchange?.name} </a>
+                    
+                    
                 </p>
                 <p>{exchange.country}</p>
             </div>
@@ -42,8 +46,8 @@ const MarketPage = () => {
           </div>
           <div className='flex justify-between py-4 text-lg'>
                     <div >
-                        <p className='text-accent '>Market Cap</p>
-                        {exchange.tickers?.base ? (<p>${exchange.tickers[0]?.base}</p>) : null}
+                        <p className='text-accent '>{exchange.description ? (<p>${exchange.description}</p>) : null}</p>
+                        
                     </div>
 
                     {/* <div>

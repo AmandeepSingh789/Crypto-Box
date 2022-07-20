@@ -23,7 +23,7 @@ const CoinPage = () => {
     return (
     <div className='rounded-div my-12 py-8 font-Josefin'>
         <div className='flex py-8'>
-            <img src={coin.image?.large} alt="" className='w-20 mr-8 animate-waving-hand hover:animate-none' />
+            <img src={coin.image?.large} alt="" className='w-20 mr-8 animate-waving-hand' />
             <div>
                 <p className='text-5xl font-bold'>
                     {coin?.name} Price
