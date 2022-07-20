@@ -11,9 +11,9 @@ const ExchangeItem = ({exchange}) => {
         <td className='mx-20'>
             <div className='flex flex-row items-center ml-12 text-center' >
 
-            <Link to={`/exchange/${exchange.id}` } className='flex flex-row'>
+            <Link to={`/exchange/${exchange.id}` } className='flex items-center'>
                 
-                <img src={exchange.image} alt=" /" className=' w-6 rounded-full mt-2 ml-4 animate-waving-hand ' />
+                <img src={exchange.image} alt=" /" className=' w-6 rounded-full animate-waving-hand ' />
 
                 <p className='ml-4 '>{exchange.name } </p>
                 
