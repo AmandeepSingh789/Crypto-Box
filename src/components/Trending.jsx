@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import axios from "axios";
 import { Link } from 'react-router-dom';
-
+import btc from '../assets/btc.png'
 const Trending = () => {
     const [trending,setTrending]=useState([]);
     const url ='https://api.coingecko.com/api/v3/search/trending';
@@ -32,7 +32,7 @@ const Trending = () => {
                             </Link>
                             <div className='flex items-center'>
                             <img className='w-4 mr-2'
-                            src="https:assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579" alt="/"  />
+                            src={btc} alt="BTC"  />
                             <p>{coin.item.price_btc.toFixed(7)}</p>
                             </div>
                         </div>
